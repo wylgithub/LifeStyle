@@ -55,6 +55,31 @@ public class FormatClass {
 		return sdf.format(date);
 	}
 	
+	/**
+	 * 判断一个字符串是否是空
+	 * @param str
+	 * @return
+	 */
+	public static boolean isEmpty(final String str){
+		return (str == null) || (str.length() == 0);
+	}
+	
+	/**
+	 * 将一个日期格式化为制定的格式
+	 * @param date
+	 * @return
+	 */
+	public static String formateDate(final Date date,final String formatStyle){
+		
+		//获得时间格式化类实例
+		SimpleDateFormat formater = new SimpleDateFormat(formatStyle);
+		
+		String formateDate = formater.format(date);
+		//返回格式化后的时间
+		return formateDate;
+	}
+	
+	
 	
 	
 }
